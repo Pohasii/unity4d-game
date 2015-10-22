@@ -13,6 +13,8 @@ public class PlayerClass
     Transform cameraTransform;
     [SerializeField]
     RectTransform energyImageTransform;
+    [SerializeField]
+    Text energyText;
     private float hit_point;
     [SerializeField]
     private float moveSpeed;
@@ -40,13 +42,13 @@ public class PlayerClass
         }
     }
 
-    public PlayerClass(Transform mytransform, Image eImage,float hp,float ms, float p_energy, float rs)
+    public PlayerClass(Transform mytransform, Canvas eCanvas,float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
         Controller = mytransform.GetComponent<CharacterController>();
         cameraTransform = mytransform.GetChild(0).GetComponent<Transform>();
-        energyImageTransform = eImage.GetComponent<RectTransform>();
-
+        energyImageTransform = eCanvas.transform.GetChild(0).GetComponent<RectTransform>();
+        energyText = eCanvas.transform.GetChild(1).GetComponent<Text>();
         hit_point = hp;
         walkSpeed = ms;
         runSpeed = ms * 2f;
@@ -68,6 +70,7 @@ public class PlayerClass
         EnegryUpdate();
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
+        energyText.text = "" + (int)curEnergy * 10;
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 20);
         Controller.Move(moveDirection * Time.deltaTime);//
     }
