@@ -94,6 +94,6 @@ public class PlayerClass
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 20);
-        Controller.Move(moveDirection * Time.deltaTime);
+        Controller.Move(moveDirection * Time.deltaTime);//
     }
 }
