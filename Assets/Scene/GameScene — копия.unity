@@ -240,10 +240,6 @@ Prefab:
     - {fileID: 11470054, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
 --- !u!1001 &190149750
 Prefab:
   m_ObjectHideFlags: 0
@@ -307,7 +303,6 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
   m_PrefabInternal: {fileID: 190149750}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1519181824}
   m_LocalRotation: {x: 0, y: .382683456, z: 0, w: .923879504}
   m_LocalPosition: {x: .275999993, y: 30, z: .275999993}
@@ -315,24 +310,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2057978298}
   m_RootOrder: 5
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
---- !u!4 &549966795 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
-  m_PrefabInternal: {fileID: 144964583}
---- !u!143 &549966796 stripped
-CharacterController:
-  m_PrefabParentObject: {fileID: 14367630, guid: 5a445b892401f0241b428d582011d6e5,
-    type: 2}
-  m_PrefabInternal: {fileID: 144964583}
-=======
->>>>>>> 9bfa6f6c25f6b07cf5986d2ef133fb3f39b293e2
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
 --- !u!1 &223093774
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +400,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
       value: -.284999996
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
@@ -433,17 +409,6 @@ Prefab:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0
-=======
-      value: -.380400002
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -471,19 +436,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.y
-<<<<<<< HEAD
       value: -113.805962
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.z
       value: .495893449
-=======
-      value: 82.3668289
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .651727974
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Name
@@ -1820,7 +1777,6 @@ RectTransform:
   m_AnchoredPosition: {x: 13.8566895, y: 20}
   m_SizeDelta: {x: 200, y: 20}
   m_Pivot: {x: .0192833897, y: .500000358}
-<<<<<<< HEAD
 --- !u!1 &1519181824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,23 +1842,11 @@ MeshFilter:
   m_GameObject: {fileID: 1519181824}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1624962618
-=======
-<<<<<<< HEAD
---- !u!1001 &1626573011
-=======
---- !u!1001 &1507245513
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-<<<<<<< HEAD
     m_TransformParent: {fileID: 0}
-=======
-<<<<<<< HEAD
-    m_TransformParent: {fileID: 1758134961}
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
     m_Modifications:
     - target: {fileID: 455634, guid: 5c6de7cf9b0bfe149b3590f7daff3baa, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1955,72 +1899,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c6de7cf9b0bfe149b3590f7daff3baa, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
-=======
---- !u!4 &1626573012 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 455634, guid: 5c6de7cf9b0bfe149b3590f7daff3baa, type: 2}
-  m_PrefabInternal: {fileID: 1626573011}
-=======
-    m_TransformParent: {fileID: 2057978298}
-    m_Modifications:
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 56.7999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: .381999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.55554871e-05
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 112.816582
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .650609851
-      objectReference: {fileID: 0}
-    - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_Name
-      value: wall sector 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1507245514 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-  m_PrefabInternal: {fileID: 1507245513}
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
 --- !u!1001 &1662084388
 Prefab:
   m_ObjectHideFlags: 0
@@ -2030,7 +1908,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
       value: -.279199988
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
@@ -2040,17 +1917,6 @@ Prefab:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.z
       value: .278200001
-=======
-      value: -.278499991
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: .277500004
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2078,19 +1944,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.y
-<<<<<<< HEAD
       value: 139.34166
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.z
       value: .623779595
-=======
-      value: 67.7955246
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .626670241
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Name
@@ -2184,77 +2042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 2
-=======
-<<<<<<< HEAD
-  m_RootOrder: 1
-=======
-  m_RootOrder: 3
---- !u!1001 &1683209120
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2057978298}
-    m_Modifications:
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .381999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .707106709
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.55554725e-05
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 82.3668289
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .651727915
-      objectReference: {fileID: 0}
-    - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_Name
-      value: wall sector 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1683209121 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-  m_PrefabInternal: {fileID: 1683209120}
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
 --- !u!1 &1723394471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2182,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
@@ -2404,17 +2191,6 @@ Prefab:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.289000005
-=======
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 56.7999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.381700009
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2442,19 +2218,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.y
-<<<<<<< HEAD
       value: 108.428261
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.z
       value: .469137996
-=======
-      value: 112.816582
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .650609851
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Name
@@ -2701,19 +2469,9 @@ Transform:
   - {fileID: 436773256}
   - {fileID: 1795396478}
   - {fileID: 190149751}
-<<<<<<< HEAD
   - {fileID: 1359771187}
   - {fileID: 1296011582}
   - {fileID: 2086096577}
-<<<<<<< HEAD
-=======
-  - {fileID: 247333730}
-=======
-  - {fileID: 2086096577}
-  - {fileID: 1683209121}
-  - {fileID: 1507245514}
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1001 &2061167959
@@ -2725,7 +2483,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
       value: -.277099997
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
@@ -2735,17 +2492,6 @@ Prefab:
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.277099997
-=======
-      value: -.277399987
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.277399987
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2773,19 +2519,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.y
-<<<<<<< HEAD
       value: 91.2967834
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.z
       value: .628350973
-=======
-      value: 63.8456345
-      objectReference: {fileID: 0}
-    - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .627642453
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
       objectReference: {fileID: 0}
     - target: {fileID: 159938, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Name
@@ -2843,15 +2581,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 8
-=======
-<<<<<<< HEAD
-      value: 9
-=======
-      value: 6
->>>>>>> parent of a6dd536... Revert "wall sectors by Dima"
->>>>>>> cbe4c235b212337c86b208aff9d948db10f9349b
       objectReference: {fileID: 0}
     - target: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalScale.x

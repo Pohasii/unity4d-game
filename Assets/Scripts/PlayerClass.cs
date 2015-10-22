@@ -21,9 +21,6 @@ public class PlayerClass
     [SerializeField]
     private float runSpeed;
 
-    enum MoveState { Stay, Walk, Run}
-    MoveState moveState;
-
     private float rotationSpeed;
     private Vector3 moveDirection;
 
@@ -68,32 +65,31 @@ public class PlayerClass
         myTransform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSpeed, 0));
         cameraTransform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * rotationSpeed, 0, 0));
         cameraTransform.eulerAngles = new Vector3(cameraTransform.eulerAngles.x, cameraTransform.eulerAngles.y, 0);
-
-        if (Input.GetKey(KeyCode.LeftShift) && (Mathf.Abs(moveDirection.x) > 0 || Mathf.Abs(moveDirection.z) > 0))
-        {
-            moveSpeed = runSpeed;
-            moveState = MoveState.Run;
-        }
-        if (!Input.GetKey(KeyCode.LeftShift) && (Mathf.Abs(moveDirection.x) > 0 || Mathf.Abs(moveDirection.z) > 0))
-        {
-            moveSpeed = walkSpeed;
-            CurEnergy1 += energyRecovery * Time.deltaTime;
-            moveState = MoveState.Walk;
-        }
-        if (Mathf.Abs(moveDirection.x) == 0 || Mathf.Abs(moveDirection.z) == 0)
-        {
-            CurEnergy1 += energyRecovery * Time.deltaTime;
-            moveState = MoveState.Stay;
-        }
-        switch (moveState)
-        {
-            case MoveState.Stay: CurEnergy1 += (energyRecovery + 5) * Time.deltaTime; break;
-            case MoveState.Walk: CurEnergy1 += (energyRecovery) * Time.deltaTime; break;
-            case MoveState.Run: CurEnergy1 -= energyReduction * Time.deltaTime; break;
-        }
+        EnegryUpdate();
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 20);
         Controller.Move(moveDirection * Time.deltaTime);//
+    }
+
+    void EnegryUpdate()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && (Mathf.Abs(moveDirection.x) > 0.1f || Mathf.Abs(moveDirection.z) > 0.1f))
+        {
+            if (CurEnergy1 > 0.1f)
+            {
+                moveSpeed = runSpeed;
+            }
+            else 
+            {
+                moveSpeed = walkSpeed;
+            }
+            CurEnergy1 -= energyReduction * Time.deltaTime;
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+            CurEnergy1 += energyRecovery * Time.deltaTime;
+        }
     }
 }
