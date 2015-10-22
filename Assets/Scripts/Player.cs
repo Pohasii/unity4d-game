@@ -25,6 +25,6 @@ public class Player : MonoBehaviour
     void Update()
     { // test жопа слонагг
         player.Move();
-        //сам жопа
+        
     }
 }
