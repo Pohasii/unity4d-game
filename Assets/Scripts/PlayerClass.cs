@@ -5,9 +5,13 @@ using UnityEngine.UI;
 [System.Serializable]
 public class PlayerClass
 {
+    [SerializeField]
     CharacterController Controller;
+    [SerializeField]
     Transform myTransform;
+    [SerializeField]
     Transform cameraTransform;
+    [SerializeField]
     RectTransform energyImageTransform;
     private float hit_point;
     [SerializeField]
@@ -87,8 +91,9 @@ public class PlayerClass
             case MoveState.Walk: CurEnergy1 += (energyRecovery) * Time.deltaTime; break;
             case MoveState.Run: CurEnergy1 -= energyReduction * Time.deltaTime; break;
         }
-
+        moveDirection.x *= moveSpeed;
+        moveDirection.z *= moveSpeed;
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 20);
-        Controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        Controller.Move(moveDirection * Time.deltaTime);
     }
 }
