@@ -191,7 +191,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 3.17000008
+=======
+      value: .889999986
+>>>>>>> ae4b99a0cd8bc865e0e2c66b82a5a5f90ee356b6
       objectReference: {fileID: 0}
     - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -217,6 +221,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 11415418, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: player.Controller
       value: 
@@ -237,11 +242,27 @@ Prefab:
       propertyPath: energyImage
       value: 
       objectReference: {fileID: 1463482405}
+=======
+    - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> ae4b99a0cd8bc865e0e2c66b82a5a5f90ee356b6
     m_RemovedComponents:
     - {fileID: 11464236, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
     - {fileID: 11470054, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &190149750
 Prefab:
   m_ObjectHideFlags: 0
@@ -304,7 +325,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 413652, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
   m_PrefabInternal: {fileID: 190149750}
-
+=======
+<<<<<<< HEAD
+--- !u!4 &549966795 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
+  m_PrefabInternal: {fileID: 144964583}
+--- !u!143 &549966796 stripped
+CharacterController:
+  m_PrefabParentObject: {fileID: 14367630, guid: 5a445b892401f0241b428d582011d6e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 144964583}
+=======
+>>>>>>> 9bfa6f6c25f6b07cf5986d2ef133fb3f39b293e2
+=======
+>>>>>>> parent of 24f5ce9... wall sectors by Dima
 --- !u!1 &223093774
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +537,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1260721602}
   m_RootOrder: 1
+>>>>>>> ae4b99a0cd8bc865e0e2c66b82a5a5f90ee356b6
 --- !u!1 &773464884
 GameObject:
   m_ObjectHideFlags: 0
