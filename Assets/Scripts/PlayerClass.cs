@@ -15,6 +15,7 @@ public class PlayerClass
     RectTransform energyImageTransform;
     [SerializeField]
     Text energyText;
+    Canvas canvas;
     private float hit_point;
     [SerializeField]
     private float moveSpeed;
@@ -46,13 +47,15 @@ public class PlayerClass
     public float minimumY = - 65;
     public float maximumY = 65;
 
-    public PlayerClass(Transform mytransform, Canvas eCanvas,float hp,float ms, float p_energy, float rs)
+    public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
         Controller = mytransform.GetComponent<CharacterController>();
         cameraTransform = mytransform.GetChild(0).GetComponent<Transform>();
-        energyImageTransform = eCanvas.transform.GetChild(0).GetComponent<RectTransform>();
-        energyText = eCanvas.transform.GetChild(1).GetComponent<Text>();
+        canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
+        energyImageTransform = canvas.transform.GetChild(0).GetComponent<RectTransform>();
+        energyText = canvas.transform.GetChild(1).GetComponent<Text>();
+        
         hit_point = hp;
         walkSpeed = ms;
         runSpeed = ms * 2f;
@@ -66,6 +69,7 @@ public class PlayerClass
 
     public void Move()
     {
+        Cursor.visible = false;
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), -5, Input.GetAxis("Vertical"));
         moveDirection = myTransform.TransformDirection(moveDirection);
         myTransform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSpeed, 0));

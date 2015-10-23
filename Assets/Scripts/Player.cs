@@ -13,13 +13,12 @@ public class Player : MonoBehaviour
     private float hitPoint;
     [SerializeField]
     private float energy;
-    public Canvas myCanvas;
     public PlayerClass player;
 
     void Start()
     {
         myTransform = GetComponent<Transform>();
-        player = new PlayerClass(myTransform, myCanvas, hitPoint, moveSpeed, energy, rotationSpeed);
+        player = new PlayerClass(myTransform, hitPoint, moveSpeed, energy, rotationSpeed);
     }
 
     void Update()
