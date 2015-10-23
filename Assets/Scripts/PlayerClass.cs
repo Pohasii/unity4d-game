@@ -42,6 +42,10 @@ public class PlayerClass
         }
     }
 
+    private float cameraRotation;
+    public float minimumY = - 65;
+    public float maximumY = 65;
+
     public PlayerClass(Transform mytransform, Canvas eCanvas,float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
@@ -65,8 +69,12 @@ public class PlayerClass
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), -5, Input.GetAxis("Vertical"));
         moveDirection = myTransform.TransformDirection(moveDirection);
         myTransform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSpeed, 0));
-        cameraTransform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * rotationSpeed, 0, 0));
-        cameraTransform.eulerAngles = new Vector3(cameraTransform.eulerAngles.x, cameraTransform.eulerAngles.y, 0);
+
+        cameraRotation += Input.GetAxis("Mouse Y") * rotationSpeed;
+        cameraRotation = Mathf.Clamp(cameraRotation, minimumY, maximumY);
+
+        cameraTransform.localEulerAngles = new Vector3(-cameraRotation, cameraTransform.localEulerAngles.y, 0);
+
         EnegryUpdate();
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
