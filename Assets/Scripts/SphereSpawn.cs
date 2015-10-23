@@ -29,15 +29,6 @@ public class SphereSpawn : MonoBehaviour
     {
         sphereSpawn();
         ScoreText.text = "Score: " + Score;
-        //if (curCountOfSphere < maxCountOfSphere)
-        //{
-        //    randSpawnPos = Random.Range(0, spawnPos.Count - 1);
-        //    ob = (GameObject) Instantiate(Sphere, spawnPos[randSpawnPos].position + Vector3.up, Quaternion.identity);
-        //    ob2 = (GameObject)Instantiate(Cursor, spawnPos[Random.Range(0, spawnPos.Count - 1)].position + Vector3.up, Quaternion.identity);
-        //    ob2.transform.LookAt(ob.transform);
-        //    ob2.transform.SetParent(ob.transform);
-        //    curCountOfSphere++;
-        //}
     }
 
     void sphereSpawn()
