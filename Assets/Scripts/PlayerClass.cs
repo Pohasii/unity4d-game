@@ -95,5 +95,9 @@ public class PlayerClass
             moveSpeed = walkSpeed;
             CurEnergy1 += energyRecovery * Time.deltaTime;
         }
+        if(moveDirection.x == 0 && moveDirection.z == 0)
+        {
+            CurEnergy1 += energyRecovery * 1.5f * Time.deltaTime;
+        }
     }
 }
