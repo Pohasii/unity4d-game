@@ -35,7 +35,7 @@ public class PlayerClass
         get { return curEnergy; }
         set
         {
-            if (value >= 0 && value <= maxEnergy)
+            if (value >= 0 && value <= maxEnergy + 0.2f)
             {
                 curEnergy = value;
             }
@@ -56,8 +56,8 @@ public class PlayerClass
 
         maxEnergy = p_energy;
         curEnergy = p_energy;
-        energyRecovery = 1;
-        energyReduction = 2;
+        energyRecovery = 10;
+        energyReduction = 20;
     }
 
     public void Move()
@@ -70,20 +70,21 @@ public class PlayerClass
         EnegryUpdate();
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
-        energyText.text = "" + (int)curEnergy * 10;
-        energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 20);
-        Controller.Move(moveDirection * Time.deltaTime);//
+        Controller.Move(moveDirection * Time.deltaTime);
     }
 
     void EnegryUpdate()
     {
+        energyText.text = "" + ((int)curEnergy * Time.deltaTime)/Time.deltaTime;
+        energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 2);
+
         if (Input.GetKey(KeyCode.LeftShift) && (Mathf.Abs(moveDirection.x) > 0.1f || Mathf.Abs(moveDirection.z) > 0.1f))
         {
-            if (CurEnergy1 > 0.1f)
+            if (CurEnergy1 > 1f)
             {
                 moveSpeed = runSpeed;
             }
-            else 
+            else
             {
                 moveSpeed = walkSpeed;
             }

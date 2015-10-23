@@ -261,6 +261,10 @@ Prefab:
       propertyPath: myCanvas
       value: 
       objectReference: {fileID: 7506213}
+    - target: {fileID: 11415418, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
+      propertyPath: energy
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11464236, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
     - {fileID: 11470054, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
