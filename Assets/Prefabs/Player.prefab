@@ -47,9 +47,6 @@ GameObject:
   - 23: {fileID: 2380496}
   - 143: {fileID: 14367630}
   - 114: {fileID: 11415418}
-  - 114: {fileID: 11414356}
-  - 114: {fileID: 11476082}
-  - 114: {fileID: 11494580}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -205,38 +202,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11414356
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 90
-    i1: 68
-    i2: 91
-    i3: 137
-    i4: 36
-    i5: 1
-    i6: 240
-    i7: 36
-    i8: 27
-    i9: 66
-    i10: 141
-    i11: 88
-    i12: 32
-    i13: 17
-    i14: 214
-    i15: 229
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &11415418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,39 +228,6 @@ MonoBehaviour:
     runSpeed: 0
     minimumY: 0
     maximumY: 0
---- !u!114 &11476082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184802}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: .100000001
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: .00100000005
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &11494580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184802}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2cf939584041a44815cf9e610c225c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 183472}
-  controller: {fileID: 14367630}
 --- !u!124 &12404574
 Behaviour:
   m_ObjectHideFlags: 1
@@ -405,7 +337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPlayerAuthority
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: myCanvas
