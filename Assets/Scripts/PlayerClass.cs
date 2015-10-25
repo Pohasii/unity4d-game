@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerClass
 {
     [SerializeField]
-    CharacterController Controller;
+    Rigidbody RigidBody;
     [SerializeField]
     Transform myTransform;
     [SerializeField]
@@ -50,7 +50,7 @@ public class PlayerClass
     public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
-        Controller = mytransform.GetComponent<CharacterController>();
+        RigidBody = mytransform.GetComponent<Rigidbody>();
         cameraTransform = mytransform.GetChild(0).GetComponent<Transform>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         energyImageTransform = canvas.transform.GetChild(0).GetComponent<RectTransform>();
@@ -70,7 +70,7 @@ public class PlayerClass
     public void Move()
     {
         Cursor.visible = false;
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), -5, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), RigidBody.velocity.y, Input.GetAxis("Vertical"));
         moveDirection = myTransform.TransformDirection(moveDirection);
         myTransform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSpeed, 0));
 
@@ -79,13 +79,20 @@ public class PlayerClass
 
         cameraTransform.localEulerAngles = new Vector3(-cameraRotation, cameraTransform.localEulerAngles.y, 0);
 
-        EnegryUpdate();
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
-        Controller.Move(moveDirection * Time.deltaTime);
+        RigidBody.velocity = moveDirection;
     }
 
-    void EnegryUpdate()
+    public void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RigidBody.AddForce(Vector3.up * 200);
+        }
+    }
+
+    public void EnegryUpdate()
     {
         energyText.text = "" + ((int)curEnergy * Time.deltaTime)/Time.deltaTime;
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 2);

@@ -22,8 +22,13 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    { // test жопа слонагг
+    {
+        player.EnegryUpdate();
+        player.Jump();
+    }
+
+    void FixedUpdate()
+    { 
         player.Move();
-        
     }
 }
