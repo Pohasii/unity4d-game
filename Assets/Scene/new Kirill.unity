@@ -404,11 +404,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d961aa1620d0de04e81504176502f807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AxisOfRotation: {x: 0, y: 0, z: 0}
   Axis: 2
   SpeedRotation: 90
   Duration: 180
-  time: 0
+  PauseDuration: 0
 --- !u!114 &57401563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,7 +1495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.30000019
+      value: 4.22300005
       objectReference: {fileID: 0}
     - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1520,7 +1519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465414, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11415418, guid: 5a445b892401f0241b428d582011d6e5, type: 2}
       propertyPath: m_Enabled
@@ -15741,7 +15740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431672, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 145
+      value: 143.850006
       objectReference: {fileID: 0}
     - target: {fileID: 431672, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15761,7 +15760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431672, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 112542, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Name
@@ -15794,7 +15793,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444334, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444334, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: Speed
@@ -15802,6 +15801,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444334, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
       propertyPath: MoveDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414860, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414860, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: SpeedRotation
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414860, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: Duration
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 112542, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
