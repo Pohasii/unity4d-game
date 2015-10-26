@@ -8324,6 +8324,14 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11444334, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: MoveDirection
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444334, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
+      propertyPath: NeedFullDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52a4212e92410bd4a95d55b9501c697a, type: 2}
   m_IsPrefabParent: 0
