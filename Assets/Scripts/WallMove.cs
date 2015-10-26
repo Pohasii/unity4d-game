@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WallMove : MonoBehaviour
 {
-    float CurDistance = 0;
+    public float CurDistance = 0;
     bool moveForward = true;
     Vector3 vectorDirection = Vector3.zero;
 
@@ -14,6 +14,11 @@ public class WallMove : MonoBehaviour
     public float DelayOfMove;
     public float Speed;
     float time = 0;
+
+    void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -30,13 +35,21 @@ public class WallMove : MonoBehaviour
             case moveDirection.left: vectorDirection = Vector3.left; break;
             case moveDirection.right: vectorDirection = Vector3.right; break;
         }
-        if (CurDistance < pDistance && moveForward)
+        if (CurDistance <= pDistance && moveForward)
         {
-            transform.Translate(vectorDirection * Time.deltaTime * Speed);
-            CurDistance += Time.deltaTime * Speed;
+            time += Time.deltaTime;
+            time = Mathf.Clamp(time, 0, pDelayOfMove);
+            if (time >= pDelayOfMove)
+            {
+                transform.Translate(vectorDirection * Time.deltaTime * Speed);
+                CurDistance += Time.deltaTime * Speed;
 
-            if (CurDistance >= pDistance)
-            moveForward = false;
+                if (CurDistance >= pDistance)
+                {
+                    moveForward = false;
+                    time = 0;
+                }
+            }
         }
         else
         {
