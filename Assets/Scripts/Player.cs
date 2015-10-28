@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        player.Animation();
         player.EnegryUpdate();
         player.Jump();
     }

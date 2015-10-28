@@ -15,6 +15,7 @@ public class WallMove : MonoBehaviour
     public float Speed;
     float time = 0;
     Transform myTransform;
+    Vector3 sign;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class WallMove : MonoBehaviour
             case moveDirection.left: vectorDirection = Vector3.left; break;
             case moveDirection.right: vectorDirection = Vector3.right; break;
         }
+
         if (CurDistance <= pDistance && moveForward)
         {
             time += Time.deltaTime;

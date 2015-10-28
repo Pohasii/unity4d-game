@@ -7,10 +7,12 @@ public class Sync : MonoBehaviour
     private Quaternion lastRot;
     private Transform myTransform;
     private NetworkView nV;
+    PlayerClass playerClass;
 
     void Start()
     {
         nV = GetComponent<NetworkView>();
+
         if (nV.isMine)
         {
             myTransform = transform;

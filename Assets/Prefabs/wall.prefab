@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3362220}
   - 65: {fileID: 6500324}
   - 23: {fileID: 2356928}
-  - 54: {fileID: 5407522}
   - 114: {fileID: 11444334}
   - 114: {fileID: 11414860}
   m_Layer: 0
@@ -64,21 +63,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112542}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5407522
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112542}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &6500324
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -102,28 +86,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d961aa1620d0de04e81504176502f807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AxisOfRotation: {x: 0, y: 0, z: 0}
   Axis: 0
+  rotateF: 1
   SpeedRotation: 0
   Duration: 0
-  time: 0
+  PauseDuration: 0
 --- !u!114 &11444334
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112542}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 517a9d01f06c038488ea2e0c8e576b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurDistance: 0
-  MoveDirection: 3
+  MoveDirection: 4
   moveBack: 1
-  NeedFullDistance: 5
+  NeedFullDistance: 10
   DelayOfMove: 2
-  Speed: 5
+  Speed: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -148,6 +132,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d82b783fce5babb4593dd4bbf3d9ebcd, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MoveDirection
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NeedFullDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 112542}

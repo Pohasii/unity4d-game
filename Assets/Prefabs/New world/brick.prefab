@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6559746}
   - 23: {fileID: 2394268}
   - 114: {fileID: 11451510}
+  - 148: {fileID: 14850806}
   m_Layer: 0
   m_Name: brick
   m_TagString: Untagged
@@ -68,7 +69,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174110}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bccb8ee368007834aaaa0d0d8d08438e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -91,6 +92,18 @@ MonoBehaviour:
   NeedFullDistance: 0
   DelayOfMove: 0
   Speed: 0
+--- !u!148 &14850806
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174110}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 439936}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -102,6 +115,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: bccb8ee368007834aaaa0d0d8d08438e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174110}

@@ -16,8 +16,8 @@ public class PlayerClass
     [SerializeField]
     Text energyText;
     Canvas canvas;
-
     private Animator vAimator;
+
     private float hit_point;
     [SerializeField]
     private float moveSpeed;
@@ -54,11 +54,30 @@ public class PlayerClass
 
     bool jumping;
 
+    public bool Jumping
+    {
+        get { return jumping; }
+        set { jumping = value; }
+    }
+
     float x, z;
+
+    public float Z
+    {
+        get { return z; }
+        set { z = value; }
+    }
+
+    public float X
+    {
+        get { return x; }
+        set { x = value; }
+    }
 
     public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
+        vAimator = mytransform.GetComponent<Animator>();
         networkView1 = mytransform.GetComponent<NetworkView>();
         RigidBody = mytransform.GetComponent<Rigidbody>();
         cameraTransform = mytransform.GetChild(0).GetComponent<Transform>();
@@ -66,7 +85,6 @@ public class PlayerClass
         energyImageTransform = canvas.transform.GetChild(0).GetComponent<RectTransform>();
         energyText = canvas.transform.GetChild(1).GetComponent<Text>();
         cameraTransform.GetComponent<Camera>().enabled = networkView1.isMine;
-        vAimator = mytransform.GetComponent<Animator>();
 
         distToGround = myTransform.GetComponent<Collider>().bounds.extents.y;
 
@@ -112,14 +130,17 @@ public class PlayerClass
         }
     }
 
+    public void Animation()
+    {
+        vAimator.SetFloat("Speed", Mathf.Abs(X));
+        vAimator.SetFloat("Speed", Mathf.Abs(Z));
+        vAimator.SetFloat("Energy", CurEnergy1);
+        vAimator.SetBool("Jumping", !Jumping);
+        vAimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
+    }
+
     public void EnegryUpdate()
     {
-        vAimator.SetFloat("Speed", Mathf.Abs(x));
-        vAimator.SetFloat("Speed", Mathf.Abs(z));
-        vAimator.SetFloat("Energy", CurEnergy1);
-        vAimator.SetBool("Jumping", !jumping);
-        vAimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
-
         energyText.text = "" + (int)((((curEnergy * Time.deltaTime)/Time.deltaTime) / maxEnergy) * 100);
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (curEnergy / maxEnergy) * 100 * 2);
 
