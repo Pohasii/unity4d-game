@@ -12,6 +12,8 @@ GameObject:
   - 65: {fileID: 6559746}
   - 23: {fileID: 2394268}
   - 114: {fileID: 11451510}
+  - 148: {fileID: 14826266}
+  - 114: {fileID: 11466644}
   m_Layer: 0
   m_Name: brick
   m_TagString: Untagged
@@ -91,6 +93,29 @@ MonoBehaviour:
   NeedFullDistance: 0
   DelayOfMove: 0
   Speed: 0
+--- !u!114 &11466644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72715632032196c4a839d157e43b1b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!148 &14826266
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174110}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 439936}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -100,6 +125,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
