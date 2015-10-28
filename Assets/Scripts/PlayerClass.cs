@@ -52,6 +52,10 @@ public class PlayerClass
 
     private NetworkView networkView1;
 
+    bool jumping;
+
+    float x, z;
+
     public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
@@ -80,7 +84,10 @@ public class PlayerClass
     public void Move()
     {
         Cursor.visible = false;
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), RigidBody.velocity.y, Input.GetAxis("Vertical"));
+
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(x, RigidBody.velocity.y, z);
         moveDirection = myTransform.TransformDirection(moveDirection);
         myTransform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSpeed, 0));
 
@@ -98,7 +105,8 @@ public class PlayerClass
 
     public void Jump()
     {
-        if(Physics.Raycast(myTransform.position,Vector3.down,distToGround + 0.1f) && Input.GetKeyDown(KeyCode.Space))
+        jumping = Physics.Raycast(myTransform.position, Vector3.down, distToGround - 0.9f);
+        if(jumping && Input.GetKeyDown(KeyCode.Space))
         {
             RigidBody.AddForce(Vector3.up * 200);
         }
@@ -106,6 +114,12 @@ public class PlayerClass
 
     public void EnegryUpdate()
     {
+        vAimator.SetFloat("Speed", Mathf.Abs(x));
+        vAimator.SetFloat("Speed", Mathf.Abs(z));
+        vAimator.SetFloat("Energy", CurEnergy1);
+        vAimator.SetBool("Jumping", !jumping);
+        vAimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
+
         energyText.text = "" + (int)((((curEnergy * Time.deltaTime)/Time.deltaTime) / maxEnergy) * 100);
         energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (curEnergy / maxEnergy) * 100 * 2);
 
