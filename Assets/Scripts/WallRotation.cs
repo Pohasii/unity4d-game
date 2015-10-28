@@ -3,22 +3,26 @@ using System.Collections;
 
 public class WallRotation : MonoBehaviour 
 {
-    public Vector3 AxisOfRotation;
+    Vector3 AxisOfRotation;
     public enum RotationAxis { forward, back, Up, Down, left, right }
     public RotationAxis Axis;
+    public bool rotateF = true;
 
     public float SpeedRotation;
     public float Duration;
-    public float time;
+    public float PauseDuration;
+    float Pause = 0;
+    float time;
+    float hz;
 
-    Quaternion target;
+    Transform localEA;
 
 	void Start () 
     {
-        target = Quaternion.Euler(transform.position - (transform.position - Vector3.up * 10));
+        localEA = GetComponent<Transform>();
 	}
 	
-	void Update () 
+	void Update ()
     {
         WallRotate(Axis);
   	}
@@ -27,23 +31,30 @@ public class WallRotation : MonoBehaviour
     {
         switch (pAxis)
         {
-            case RotationAxis.forward: AxisOfRotation = Vector3.forward; break;
-            case RotationAxis.back: AxisOfRotation = Vector3.back; break;
-            case RotationAxis.Up: AxisOfRotation = Vector3.up; break;
-            case RotationAxis.Down: AxisOfRotation = Vector3.down; break;
-            case RotationAxis.left: AxisOfRotation = Vector3.left; break;
-            case RotationAxis.right: AxisOfRotation = Vector3.right; break;
+            case RotationAxis.forward: AxisOfRotation = Vector3.forward; hz = localEA.localEulerAngles.z;break; //localEA.localEulerAngles = new Vector3(0,0,Mathf.Clamp(localEA.localEulerAngles.z,0,Duration)); break;
+            case RotationAxis.back: AxisOfRotation = Vector3.back; hz = -localEA.localEulerAngles.z; break;//localEA.localEulerAngles = new Vector3(0, 0, Mathf.Clamp(-localEA.localEulerAngles.z, 0, Duration)); break;
+            case RotationAxis.Up: AxisOfRotation = Vector3.up; hz = localEA.localEulerAngles.y; break;//localEA.localEulerAngles = new Vector3(0, Mathf.Clamp(localEA.localEulerAngles.y, 0, Duration),0); break;
+            case RotationAxis.Down: AxisOfRotation = Vector3.down; hz = -localEA.localEulerAngles.y; break; //localEA.localEulerAngles = new Vector3(0, Mathf.Clamp(-localEA.localEulerAngles.y, 0, Duration), 0); break;
+            case RotationAxis.left: AxisOfRotation = Vector3.left; hz = -localEA.localEulerAngles.x; break;//localEA.localEulerAngles = new Vector3(Mathf.Clamp(-localEA.localEulerAngles.x, 0, Duration), 0, 0); break;
+            case RotationAxis.right: AxisOfRotation = Vector3.right; hz = localEA.localEulerAngles.x; break;//localEA.localEulerAngles = new Vector3(Mathf.Clamp(localEA.localEulerAngles.x, 0, Duration), 0, 0); break;
         }
 
-        time += Time.deltaTime * SpeedRotation;
-        time = Mathf.Clamp(time, 0, Duration);
-        if (time < Duration)
+        if (rotateF)
         {
-            transform.Rotate(AxisOfRotation * SpeedRotation * Time.deltaTime);
+            localEA.localEulerAngles -= new Vector3(0, SpeedRotation * Time.deltaTime, 0);
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        else
         {
-            time = 0;
+            //localEA.localEulerAngles -= new Vector3(0, SpeedRotation * Time.deltaTime, 0);
+        }
+        //localEA.localEulerAngles = new Vector3(0, Mathf.Clamp(localEA.localEulerAngles.y, 0, Duration), 0);
+        if (hz >= Duration)
+        {
+            rotateF = false;
+        }
+        if(hz <= 0)
+        {
+            rotateF = true;
         }
     }
 }

@@ -14,10 +14,11 @@ public class WallMove : MonoBehaviour
     public float DelayOfMove;
     public float Speed;
     float time = 0;
+    Transform myTransform;
 
     void Start()
     {
-        
+        myTransform = transform;
     }
 
     void Update()
@@ -41,7 +42,7 @@ public class WallMove : MonoBehaviour
             time = Mathf.Clamp(time, 0, pDelayOfMove);
             if (time >= pDelayOfMove)
             {
-                transform.Translate(vectorDirection * Time.deltaTime * Speed);
+                myTransform.Translate(vectorDirection * Time.deltaTime * Speed);
                 CurDistance += Time.deltaTime * Speed;
 
                 if (CurDistance >= pDistance)
@@ -59,7 +60,7 @@ public class WallMove : MonoBehaviour
                 time = Mathf.Clamp(time, 0, pDelayOfMove);
                 if (time >= pDelayOfMove)
                 {
-                    transform.Translate((vectorDirection * Time.deltaTime) * -Speed);
+                    myTransform.Translate((vectorDirection * Time.deltaTime) * -Speed);
                     CurDistance -= Time.deltaTime * Speed;
 
                     if (CurDistance <= 0)

@@ -179,9 +179,9 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 13.8566895, y: 20}
-  m_SizeDelta: {x: 200.205383, y: 20}
-  m_Pivot: {x: .0192833897, y: .500000358}
+  m_AnchoredPosition: {x: 9.99606323, y: 20}
+  m_SizeDelta: {x: 200, y: 20}
+  m_Pivot: {x: -3.93483788e-08, y: .500000358}
 --- !u!224 &22441496
 RectTransform:
   m_ObjectHideFlags: 1
@@ -224,7 +224,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161458}

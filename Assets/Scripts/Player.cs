@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     }
 
     void FixedUpdate()
-    { 
+    {
         player.Move();
     }
 }
