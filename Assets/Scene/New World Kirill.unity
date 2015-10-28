@@ -36412,6 +36412,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 437342, guid: b3eda3482da06a9429cef1755d063cdc, type: 2}
   m_PrefabInternal: {fileID: 1068402064}
+--- !u!1001 &1071666103
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 99.7681198
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 99.502739
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414706, guid: 743479521e18d084db568571176f2d59, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 743479521e18d084db568571176f2d59, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1071811640
 Prefab:
   m_ObjectHideFlags: 0
@@ -37169,7 +37211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &1093769374
 Prefab:
   m_ObjectHideFlags: 0
@@ -54508,11 +54550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d961aa1620d0de04e81504176502f807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AxisOfRotation: {x: 0, y: 0, z: 0}
   Axis: 2
+  rotateF: 1
   SpeedRotation: 45
   Duration: 360000
-  time: 0
+  PauseDuration: 0
 --- !u!1001 &1628145990
 Prefab:
   m_ObjectHideFlags: 0
@@ -68407,7 +68449,7 @@ Transform:
   m_Children:
   - {fileID: 1338973076}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &2080780671
 Prefab:
   m_ObjectHideFlags: 0

@@ -66,6 +66,6 @@ public class Server : MonoBehaviour
     [RPC]
     public void LoadLevelRPC()
     {
-        Application.LoadLevel("new Kirill");
+        Application.LoadLevel("New World Kirill");
     }
 }

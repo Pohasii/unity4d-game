@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scene/new Kirill.unity
   - enabled: 1
     path: Assets/Scene/GameScene.unity
+  - enabled: 1
+    path: Assets/Scene/New World Kirill.unity
