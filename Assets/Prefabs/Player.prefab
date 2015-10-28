@@ -45,9 +45,11 @@ GameObject:
   - 4: {fileID: 465414}
   - 33: {fileID: 3306098}
   - 23: {fileID: 2380496}
-  - 114: {fileID: 11415418}
   - 54: {fileID: 5446544}
   - 136: {fileID: 13634850}
+  - 148: {fileID: 14826492}
+  - 114: {fileID: 11415418}
+  - 114: {fileID: 11423058}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -62,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02999997, y: .720000029, z: 132.550003}
+  m_LocalPosition: {x: 404.665985, y: 344.814911, z: -589.704163}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 480110}
@@ -111,7 +113,7 @@ Camera:
     height: 1
   near clip plane: .100000001
   far clip plane: 1000
-  field of view: 35
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -229,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ce4b0f0efd16040a6be65d29dfaaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
   rotationSpeed: 2
   hitPoint: 0
   energy: 100
@@ -244,6 +246,17 @@ MonoBehaviour:
     runSpeed: 0
     minimumY: 0
     maximumY: 0
+--- !u!114 &11423058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72715632032196c4a839d157e43b1b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12404574
 Behaviour:
   m_ObjectHideFlags: 1
@@ -264,6 +277,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!148 &14826492
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184802}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 465414}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -273,7 +298,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: energy
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: moveSpeed
@@ -366,7 +391,23 @@ Prefab:
       objectReference: {fileID: 183472}
     - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: field of view
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

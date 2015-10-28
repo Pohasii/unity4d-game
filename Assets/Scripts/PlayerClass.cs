@@ -46,16 +46,18 @@ public class PlayerClass
     private float cameraRotation;
     public float minimumY = - 65;
     public float maximumY = 65;
+    private NetworkView networkView1;
 
     public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
     {
         myTransform = mytransform;
+        networkView1 = mytransform.GetComponent<NetworkView>();
         RigidBody = mytransform.GetComponent<Rigidbody>();
         cameraTransform = mytransform.GetChild(0).GetComponent<Transform>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         energyImageTransform = canvas.transform.GetChild(0).GetComponent<RectTransform>();
         energyText = canvas.transform.GetChild(1).GetComponent<Text>();
-        
+        cameraTransform.GetComponent<Camera>().enabled = networkView1.isMine;
         hit_point = hp;
         walkSpeed = ms;
         runSpeed = ms * 2f;
@@ -81,6 +83,8 @@ public class PlayerClass
 
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
+
+        if (networkView1.isMine)
         RigidBody.velocity = moveDirection;
     }
 
@@ -94,8 +98,8 @@ public class PlayerClass
 
     public void EnegryUpdate()
     {
-        energyText.text = "" + ((int)curEnergy * Time.deltaTime)/Time.deltaTime;
-        energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, curEnergy * 2);
+        energyText.text = "" + (int)((((curEnergy * Time.deltaTime)/Time.deltaTime) / maxEnergy) * 100);
+        energyImageTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (curEnergy / maxEnergy) * 100 * 2);
 
         if (Input.GetKey(KeyCode.LeftShift) && (Mathf.Abs(moveDirection.x) > 0.1f || Mathf.Abs(moveDirection.z) > 0.1f))
         {
