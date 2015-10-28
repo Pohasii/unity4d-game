@@ -16,6 +16,8 @@ public class PlayerClass
     [SerializeField]
     Text energyText;
     Canvas canvas;
+
+    private Animator vAimator;
     private float hit_point;
     [SerializeField]
     private float moveSpeed;
@@ -26,6 +28,7 @@ public class PlayerClass
 
     private float rotationSpeed;
     private Vector3 moveDirection;
+    private float distToGround;
 
     private float maxEnergy;
     private float curEnergy;
@@ -46,6 +49,7 @@ public class PlayerClass
     private float cameraRotation;
     public float minimumY = - 65;
     public float maximumY = 65;
+
     private NetworkView networkView1;
 
     public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
@@ -58,6 +62,10 @@ public class PlayerClass
         energyImageTransform = canvas.transform.GetChild(0).GetComponent<RectTransform>();
         energyText = canvas.transform.GetChild(1).GetComponent<Text>();
         cameraTransform.GetComponent<Camera>().enabled = networkView1.isMine;
+        vAimator = mytransform.GetComponent<Animator>();
+
+        distToGround = myTransform.GetComponent<Collider>().bounds.extents.y;
+
         hit_point = hp;
         walkSpeed = ms;
         runSpeed = ms * 2f;
@@ -90,7 +98,7 @@ public class PlayerClass
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(Physics.Raycast(myTransform.position,Vector3.down,distToGround + 0.1f) && Input.GetKeyDown(KeyCode.Space))
         {
             RigidBody.AddForce(Vector3.up * 200);
         }
