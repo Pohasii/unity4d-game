@@ -25,6 +25,7 @@ public class PlayerClass
     private float walkSpeed;
     [SerializeField]
     private float runSpeed;
+    private float JumpForce;
 
     private float rotationSpeed;
     private Vector3 moveDirection;
@@ -80,7 +81,7 @@ public class PlayerClass
         set { x = value; }
     }
 
-    public PlayerClass(Transform mytransform, float hp,float ms, float p_energy, float rs)
+    public PlayerClass(Transform mytransform, float hp,float ms, float jumpforce,float p_energy, float rs)
     {
         myTransform = mytransform;
         vAimator = mytransform.GetComponent<Animator>();
@@ -98,6 +99,7 @@ public class PlayerClass
         walkSpeed = ms;
         runSpeed = ms * 2f;
         rotationSpeed = rs;
+        JumpForce = jumpforce;
 
         maxEnergy = p_energy;
         curEnergy = p_energy;
@@ -132,7 +134,7 @@ public class PlayerClass
         jumping = Physics.Raycast(myTransform.position, Vector3.down, distToGround - 0.9f);
         if(jumping && Input.GetKeyDown(KeyCode.Space))
         {
-            RigidBody.AddForce(Vector3.up * 200);
+            RigidBody.AddForce(Vector3.up * JumpForce);
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class WallMove : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class WallMove : MonoBehaviour
     float time = 0;
     Transform myTransform;
     Vector3 sign;
-
+    
     void Start()
     {
         enabled = Network.isServer;
@@ -29,6 +30,7 @@ public class WallMove : MonoBehaviour
     }
     void MoveWall(float pDistance, float pSpeed,moveDirection pMoveDirection, bool pMoveBack, float pDelayOfMove)
     {
+        float tim_e = (float)Math.Round(Time.deltaTime, 2);
         switch (pMoveDirection)
         {
             case moveDirection.forward: vectorDirection = Vector3.forward; break;
@@ -41,12 +43,12 @@ public class WallMove : MonoBehaviour
 
         if (CurDistance <= pDistance && moveForward)
         {
-            time += Time.deltaTime;
+            time += tim_e;
             time = Mathf.Clamp(time, 0, pDelayOfMove);
             if (time >= pDelayOfMove)
             {
-                myTransform.Translate(vectorDirection * Time.deltaTime * Speed);
-                CurDistance += Time.deltaTime * Speed;
+                myTransform.Translate(vectorDirection * tim_e * Speed);
+                CurDistance += tim_e * Speed;
 
                 if (CurDistance >= pDistance)
                 {
@@ -59,12 +61,12 @@ public class WallMove : MonoBehaviour
         {
             if (pMoveBack)
             {
-                time += Time.deltaTime;
+                time += tim_e;
                 time = Mathf.Clamp(time, 0, pDelayOfMove);
                 if (time >= pDelayOfMove)
                 {
-                    myTransform.Translate((vectorDirection * Time.deltaTime) * -Speed);
-                    CurDistance -= Time.deltaTime * Speed;
+                    myTransform.Translate((vectorDirection * tim_e) * -Speed);
+                    CurDistance -= tim_e * Speed;
 
                     if (CurDistance <= 0)
                     {

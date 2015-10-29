@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private float hitPoint;
     [SerializeField]
     private float energy;
+    [SerializeField]
+    private float JumpForce;
+
     public PlayerClass player;
     private NetworkView networkView1;
     public string str;
@@ -21,7 +24,7 @@ public class Player : MonoBehaviour
     {
         networkView1 = GetComponent<NetworkView>();
         myTransform = GetComponent<Transform>();
-        player = new PlayerClass(myTransform, hitPoint, moveSpeed, energy, rotationSpeed);
+        player = new PlayerClass(myTransform, hitPoint, moveSpeed, JumpForce, energy, rotationSpeed);
     }
 
     void Update()

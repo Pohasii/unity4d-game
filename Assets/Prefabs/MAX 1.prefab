@@ -2165,6 +2165,7 @@ MonoBehaviour:
   rotationSpeed: 2
   hitPoint: 0
   energy: 100
+  JumpForce: 250
   player:
     RigidBody: {fileID: 0}
     myTransform: {fileID: 0}
@@ -2176,6 +2177,7 @@ MonoBehaviour:
     runSpeed: 0
     minimumY: 0
     maximumY: 0
+  str: 
 --- !u!124 &12488358
 Behaviour:
   m_ObjectHideFlags: 1
@@ -2358,6 +2360,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Observed
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: JumpForce
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
