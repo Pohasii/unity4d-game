@@ -481,9 +481,9 @@ GameObject:
   - 95: {fileID: 9521354}
   - 136: {fileID: 13667622}
   - 54: {fileID: 5434418}
-  - 148: {fileID: 14801998}
   - 114: {fileID: 11426542}
   - 114: {fileID: 11408188}
+  - 148: {fileID: 14888240}
   m_Layer: 0
   m_Name: MAX 1
   m_TagString: Untagged
@@ -2320,7 +2320,7 @@ SkinnedMeshRenderer:
     m_Center: {x: .0419813991, y: -.00427400321, z: -.0128853172}
     m_Extent: {x: .38430512, y: .156562209, z: .180570737}
   m_DirtyAABB: 0
---- !u!148 &14801998
+--- !u!148 &14888240
 NetworkView:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2354,6 +2354,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_BounceIntensity
       value: 1.64999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Observed
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

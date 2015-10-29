@@ -7,11 +7,22 @@ public class Sync : MonoBehaviour
     private Quaternion lastRot;
     private Transform myTransform;
     private NetworkView nV;
-    PlayerClass playerClass;
+    Player player;
+
+    float x;
+    float z;
+    float energy;
+    bool jumping, run;
 
     void Start()
     {
         nV = GetComponent<NetworkView>();
+        player = GetComponent<Player>();
+        x = player.player.X;
+        z = player.player.Z;
+        energy = player.player.CurEnergy1;
+        jumping = !player.player.Jumping;
+        run = player.player.run2;
 
         if (nV.isMine)
         {

@@ -12,8 +12,6 @@ GameObject:
   - 65: {fileID: 6577382}
   - 23: {fileID: 2392316}
   - 114: {fileID: 11484982}
-  - 148: {fileID: 14892088}
-  - 114: {fileID: 11437770}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -76,17 +74,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11437770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106942}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72715632032196c4a839d157e43b1b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11484982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,18 +91,6 @@ MonoBehaviour:
   NeedFullDistance: 0
   DelayOfMove: 0
   Speed: 0
---- !u!148 &14892088
-NetworkView:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106942}
-  m_Enabled: 1
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 437342}
-  m_ViewID:
-    m_ID: 0
-    m_Type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -52,7 +52,13 @@ public class PlayerClass
 
     private NetworkView networkView1;
 
-    bool jumping;
+    bool jumping, run;
+
+    public bool run2
+    {
+        get { return run; }
+        set { run = value; }
+    }
 
     public bool Jumping
     {
@@ -102,7 +108,6 @@ public class PlayerClass
     public void Move()
     {
         Cursor.visible = false;
-
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         moveDirection = new Vector3(x, RigidBody.velocity.y, z);
@@ -117,12 +122,13 @@ public class PlayerClass
         moveDirection.x *= moveSpeed;
         moveDirection.z *= moveSpeed;
 
-        if (networkView1.isMine)
+        //if (networkView1.isMine)
         RigidBody.velocity = moveDirection;
     }
 
     public void Jump()
     {
+        run2 = Input.GetKey(KeyCode.LeftShift);
         jumping = Physics.Raycast(myTransform.position, Vector3.down, distToGround - 0.9f);
         if(jumping && Input.GetKeyDown(KeyCode.Space))
         {
@@ -136,7 +142,7 @@ public class PlayerClass
         vAimator.SetFloat("Speed", Mathf.Abs(Z));
         vAimator.SetFloat("Energy", CurEnergy1);
         vAimator.SetBool("Jumping", !Jumping);
-        vAimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
+        vAimator.SetBool("Run", run2);
     }
 
     public void EnegryUpdate()
