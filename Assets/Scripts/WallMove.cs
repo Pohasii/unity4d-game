@@ -19,6 +19,7 @@ public class WallMove : MonoBehaviour
 
     void Start()
     {
+        enabled = Network.isServer;
         myTransform = transform;
     }
 

@@ -19,6 +19,7 @@ public class WallRotation : MonoBehaviour
 
 	void Start () 
     {
+        enabled = Network.isServer;
         localEA = GetComponent<Transform>();
 	}
 	
