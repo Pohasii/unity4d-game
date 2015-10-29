@@ -28,12 +28,12 @@ public class Sync : MonoBehaviour
         if(Vector3.Distance(myTransform.position, lastPos) >= 0.01f)
         {
             lastPos = myTransform.position;
-            nV.RPC("UpdateMovment", RPCMode.Others, myTransform.position, myTransform.rotation);
+            nV.RPC("UpdateMovment", RPCMode.OthersBuffered, myTransform.position, myTransform.rotation);
         }
         if (Quaternion.Angle(myTransform.rotation, lastRot) >= 1)
         {
             lastRot = myTransform.rotation;
-            nV.RPC("UpdateMovment", RPCMode.Others, myTransform.position, myTransform.rotation);
+            nV.RPC("UpdateMovment", RPCMode.OthersBuffered, myTransform.position, myTransform.rotation);
         }
     }
 

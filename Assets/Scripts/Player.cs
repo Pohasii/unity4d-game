@@ -14,9 +14,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float energy;
     public PlayerClass player;
+    private bool networkView1;
 
     void Start()
     {
+        networkView1 = GetComponent<NetworkView>().isMine;
+        enabled = networkView1;
         myTransform = GetComponent<Transform>();
         player = new PlayerClass(myTransform, hitPoint, moveSpeed, energy, rotationSpeed);
     }
